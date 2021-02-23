@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 /*Master styles*/
@@ -186,8 +185,12 @@ h1#h1 {
     font-size: 1.5rem;
 }
 
-.home-icon {
+.home-icon, .inner{
     display: none;
+}
+
+ .scroll-btn i {
+   display: none;
 }
 
 /* Keyframes */
@@ -271,11 +274,14 @@ h1#h1 {
         position: fixed;
         top: 85%;
         right: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         animation: nice-up 2s linear infinite;
     }
+
+   .scroll-btn i {
+       position: relative;
+       z-index: 200;
+       display: block;
+     }
 
     a .scroll-btn:hover {
         animation: none;
