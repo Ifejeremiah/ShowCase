@@ -18,3 +18,19 @@ rightSide.addEventListener('click', () => {
     inner.classList.toggle('menu');
     rightSide.classList.toggle('right-inner');
 })
+
+let $window = $(window);
+let $windowHeight = $window.height();
+let $zoneHeight = $('div.zone').offset().top;
+let $btn = $('a div.scroll-btn');
+let zone = $zoneHeight - $windowHeight;
+
+$(function () {
+    $window.on('scroll', function () {
+        if (zone < $window.scrollTop()) {
+            $btn.fadeIn(1000);
+        } else {
+            $btn.fadeOut(100);
+        }
+    })
+});
